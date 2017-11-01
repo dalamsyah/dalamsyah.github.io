@@ -9,12 +9,6 @@ app.controller('AppCtrl', function ($scope, $timeout, $mdSidenav, $log, $firebas
     $mdSidenav(menuId).toggle();
   };
 
-  var removeFunction = $mdTheming.setBrowserColor({
-    theme: 'myTheme', // Default is 'default'
-    palette: 'accent', // Default is 'primary', any basic material palette and extended palettes are available
-    hue: '200' // Default is '800'
-  });
-
   $scope.$on('$destroy', function () {
     removeFunction(); // COMPLETELY removes the browser color
   });
